@@ -9,24 +9,39 @@ const Shop = (props) => {
     console.log(e);
   };
 
+  const changeNewSrc = (e, newSrc) => {
+    console.log(e.target.src);
+    e.target.src = newSrc;
+    console.log(newSrc);
+  };
+
+  const changeBackSrc = (e, oldSrc) => {
+    e.target.src = oldSrc;
+  };
+
   return (
     <div className="product-container">
-      <img
-        src={require("../assets/Kamakaze_Banner_NEW_1600x.webp")}
-        id={"banner-image"}
-        alt="banner"
-      />
+      <div id="banner-wrapper">
+        <img
+          src={require("../assets/Kamakaze_Banner_NEW_1600x.webp")}
+          id={"banner-image"}
+          alt="banner"
+        />
+      </div>
       {products.map((product) => {
         return (
-          <div
-            key={product.id}
-            className={"card"}
-            id={product.name}
-            onClick={(e) => {
-              handleclick(e);
-            }}
-          >
+          <div className="wrapper">
             <img
+              onClick={(e) => {
+                handleclick(e);
+              }}
+              onMouseOver={(e) => {
+                changeNewSrc(e, product.secondaryImage);
+              }}
+              onMouseLeave={(e) => {
+                changeBackSrc(e, product.mainImage);
+              }}
+              key={product.id}
               src={product.mainImage}
               alt={product.name}
               id={"product-image"}
