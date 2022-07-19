@@ -1,0 +1,19 @@
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* justify-content: space-around; */
+  align-items: center;
+  background-color: rgb(61, 61, 61);
+  min-height: 12vh;
+  color: white;
+}
+
+#cart-logo {
+  justify-self: end;
+  padding-right: 2rem;
+}
+
+h2 {
+  color: white;
+  text-decoration: none;
+}
