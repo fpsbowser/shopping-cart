@@ -3,7 +3,7 @@ import uniqid from "uniqid";
 import "../styles/cart.css";
 
 const Cart = (props) => {
-  const { customerItems } = props;
+  const { customerItems, handleDelete } = props;
 
   const getTotalPrice = (arr) => {
     let total = 0;
@@ -29,7 +29,7 @@ const Cart = (props) => {
   return (
     <div className="cart-container">
       <div className="receipt">
-        {customerItems.map((item) => {
+        {customerItems.map((item, index) => {
           return (
             <div className="cart-item" key={uniqid()}>
               <img
@@ -38,6 +38,14 @@ const Cart = (props) => {
                 id="cart-product-image"
               />
               <div className="product-info">
+                <img
+                  src={require("../assets/close.png")}
+                  alt="remove button"
+                  id="remove-btn"
+                  onClick={() => {
+                    handleDelete(index, item.quantity);
+                  }}
+                />
                 <p className="cart-name">{item.name}</p>
                 <p className="cart-quantity">Quantity: {item.quantity}</p>
                 <p className="cart-price">Price: ${item.price}</p>

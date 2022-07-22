@@ -29,6 +29,12 @@ function App() {
     }
   };
 
+  const handleDelete = (id, qty) => {
+    console.log(`reached: ${id}`);
+    setCustomerItems((current) => current.filter((_, index) => index !== id));
+    setQuantity(quantity - qty);
+  };
+
   console.log(products);
   return (
     <Router>
@@ -40,7 +46,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route
             path="/cart"
-            element={<Cart customerItems={customerItems} />}
+            element={
+              <Cart customerItems={customerItems} handleDelete={handleDelete} />
+            }
           />
           <Route
             path="/shop/:id"
