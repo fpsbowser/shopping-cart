@@ -17,6 +17,25 @@
   color: white;
 }
 
+.qty-price-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#up-down-container {
+  display: grid;
+}
+
+#quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+#qty-text {
+  padding-right: 1rem;
+}
+
 .info {
   display: grid;
   gap: 1rem;
