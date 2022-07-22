@@ -1,19 +1,43 @@
 nav {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* justify-content: space-around; */
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  background-color: rgb(61, 61, 61);
-  min-height: 12vh;
+  background-color: rgb(0, 0, 0);
+  min-height: 10vh;
   color: white;
-}
-
-#cart-logo {
-  justify-self: end;
-  padding-right: 2rem;
+  position: sticky;
+  top: 0px;
+  border: red 1px solid;
 }
 
 h2 {
   color: white;
-  text-decoration: none;
+  background-color: black;
+}
+
+#logo {
+  width: 3rem;
+  border: 0;
+}
+
+#cart-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  color: red;
+  background-color: black;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: white;
+  background-color: black;
+  align-self: flex-start;
+}
+
+.number-of-items {
+  background-color: black;
+  align-self: flex-end;
+  font-size: 1.4em;
 }
