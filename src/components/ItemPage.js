@@ -7,10 +7,21 @@ const ItemPage = (props) => {
   const { products, handleclick } = props;
 
   const [index, setIndex] = useState(0);
+  const [qty, setQty] = useState(1);
 
   useEffect(() => {
     setIndex(returnIndex(params.id));
   }, []);
+
+  const increment = () => {
+    console.log("increment");
+    setQty(qty + 1);
+  };
+
+  const decrement = () => {
+    console.log("decrement");
+    setQty(qty - 1);
+  };
 
   const returnIndex = (params) => {
     switch (params) {
@@ -60,11 +71,31 @@ const ItemPage = (props) => {
         <div className="information-container">
           <div className="info">
             <h1 id="#info-product-name">{products[index].name}</h1>
-            <p id="info-product-price">${products[index].price}.00</p>
+            <div className="qty-price-container">
+              <p id="info-product-price">${products[index].price}.00</p>
+              <div id="quantity-container">
+                <p id="qty-text">Qty: {qty}</p>
+                <div id="up-down-container">
+                  <img
+                    src={require("../assets/chevron-up.png")}
+                    alt="increase button"
+                    id="increase-btn"
+                    onClick={increment}
+                  />
+                  <img
+                    src={require("../assets/chevron-down.png")}
+                    alt="decrease button"
+                    id="decrease-btn"
+                    onClick={decrement}
+                  />
+                </div>
+              </div>
+            </div>
+
             <button
               id="add-btn"
               onClick={() => {
-                handleclick(products[index]);
+                handleclick(products[index], qty);
               }}
             >
               Add to bag

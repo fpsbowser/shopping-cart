@@ -14,17 +14,17 @@ function App() {
   const [customerItems, setCustomerItems] = useState([]);
   const [quantity, setQuantity] = useState(0);
 
-  const handleclick = (item) => {
+  const handleclick = (item, qty) => {
     const itemIdArr = customerItems.map((item) => {
       return item.id;
     });
     console.log(itemIdArr);
     if (itemIdArr.includes(item.id)) {
-      setQuantity(quantity + 1);
-      item.quantity += 1;
+      setQuantity(quantity + qty);
+      item.quantity += qty;
     } else {
-      item.quantity += 1;
-      setQuantity(quantity + 1);
+      item.quantity += qty;
+      setQuantity(quantity + qty);
       setCustomerItems(customerItems.concat(item));
     }
   };
