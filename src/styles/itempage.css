@@ -1,0 +1,53 @@
+.item-page-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#item-image {
+  width: 100%;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.information-container {
+  padding: 2rem;
+  color: white;
+}
+
+.info {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid red;
+  position: sticky;
+  top: 9rem;
+}
+
+#add-btn {
+  color: white;
+  background-color: red;
+  padding: 1rem;
+  border: 0;
+}
+
+#add-btn:active {
+  scale: 1.1;
+}
+
+@media (max-width: 450px) {
+  .item-page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .information-container {
+    grid-row-start: 1;
+  }
+
+  .info {
+    position: static;
+  }
+}

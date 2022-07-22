@@ -1,0 +1,15 @@
+#about-title {
+  color: white;
+  font-size: 3em;
+  padding-bottom: 2rem;
+}
+
+p {
+  color: white;
+  font-size: 2em;
+}
+
+#eminem-link {
+  color: red;
+  text-decoration: underline;
+}
