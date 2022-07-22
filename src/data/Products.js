@@ -1,24 +1,26 @@
-import uniqid from "uniqid";
+// import uniqid from "uniqid";
 
 const products = [
   {
-    id: uniqid(),
+    id: "kamikaze-green-hoodie",
     name: "Kamikaze Green Hoodie",
-    description: "",
+    description:
+      "Unisex fleece pullover hoodie in military green with matching drawcords. Black text printed on front chest, black text printed down back center, and multi-color patch on right wrist.",
     mainImage: require("../assets/Kamikaze_Green_Hoodie_Male_Model_Front_1024x1024_f9d40831-2f58-4a08-a853-eb1f057ea1b8_1024x1024.webp"),
     secondaryImage: require("../assets/Kamikaze_Green_Hoodie_Female_Model_Front_1024x1024_61b11c74-3050-43cb-9064-cb8cc8b63746_1024x1024.webp"),
     additionalImages: [
       require("../assets/Kamikaze_Green_Hoodie_Male_Model_Back_1024x1024_c48eea22-2dba-4ef3-b730-891fce314c7d_1024x1024.webp"),
       require("../assets/Kamikaze_Green_Hoodie_Female_Model_Back_1024x1024_db7bee31-f3c9-4ebf-b6e4-f902babd7ef5_1024x1024.jpg"),
     ],
-    size: "",
+    size: ["Small", "Medium", "Large"],
     quantity: 0,
     price: 60,
   },
   {
-    id: uniqid(),
+    id: "kamikaze-green-cropped-hoodie",
     name: "Kamikaze Green Cropped Hoodie",
-    description: "",
+    description:
+      "WOMENS FLEECE PULLOVER HOODIE IN MILITARY GREEN WITH MATCHING DRAWCORDS. BLACK TEXT PRINTED ON FRONT CHEST, BLACK TEXT PRINTED DOWN BACK CENTER, AND MULTI-COLOR PATCH ON RIGHT WRIST.!",
     mainImage: require("../assets/Kamikaze_Crop_-_Front_-_Liv_1024x1024.webp"),
     secondaryImage: require("../assets/Kamikaze_Crop_-_Detail_-_Liv_1024x1024.webp"),
     additionalImages: [
@@ -30,9 +32,10 @@ const products = [
     price: 60,
   },
   {
-    id: uniqid(),
+    id: "top-gunner-patch-cropped-hoodie",
     name: "Top Gunner Patch Cropped Hoodie",
-    description: "",
+    description:
+      "M. MATHERS REPORTING FOR DUTY. DIRECT EMBROIDERY ON CHEST AND HAND SEWN ARM PATCH ON A BLACK CHAMPION HOODIE.",
     mainImage: require("../assets/Top_Gunner_Crop_-_Gina_1024x1024.webp"),
     secondaryImage: require("../assets/Top_Gunner_Crop_-_Detail_-_Gina02_1024x1024.webp"),
     additionalImages: [
@@ -44,9 +47,10 @@ const products = [
     price: 60,
   },
   {
-    id: uniqid(),
+    id: "top-gunner-patch-hoodie",
     name: "Top Gunner Patch Hoodie",
-    description: "",
+    description:
+      "M. Mathers reporting for duty. Direct embroidery on chest and hand sewn arm patch on a black Champion hoodie",
     mainImage: require("../assets/Top_Gunner_Patch_Hoodie_Male_Model_1024x1024.webp"),
     secondaryImage: require("../assets/Top_Gunner_Patch_Hoodie_Male_Model_Detail_1024x1024.webp"),
     additionalImages: [
@@ -58,9 +62,10 @@ const products = [
     price: 65,
   },
   {
-    id: uniqid(),
+    id: "womens-plane-cropped-hoodie",
     name: "Women's Plane Cropped Hoodie",
-    description: "",
+    description:
+      "Plane from the official Kamikaze album art wraps around the right side with Kamikaze printed in sandstone on the left arm of a black hoodie.",
     mainImage: require("../assets/Women_s_Plane_Cropped_Hoodie_Female_Model_1024x1024.webp"),
     secondaryImage: require("../assets/Women_s_Plane_Cropped_Hoodie_Detail_1024x1024.webp"),
     additionalImages: [
@@ -72,9 +77,10 @@ const products = [
     price: 60,
   },
   {
-    id: uniqid(),
+    id: "death-before-defeat-lightweight-black-bomber",
     name: "Death Before Defeat Lightweight Black Bomber",
-    description: "",
+    description:
+      "Unisex lightweight bomber in black. White text printed on front left chest and gray scale image printed on back.",
     mainImage: require("../assets/Death_Before_Defeat_Lightweight_Black_Bomber_Male_Model_Front_1024x1024.webp"),
     secondaryImage: require("../assets/Death_Before_Defeat_Lightweight_Black_Bomber_Male_Model_Back_1024x1024.webp"),
     additionalImages: [
@@ -86,9 +92,10 @@ const products = [
     price: 70,
   },
   {
-    id: uniqid(),
+    id: "unconquered-black-long-sleeve",
     name: "Unconquered Black Long Sleeve",
-    description: "",
+    description:
+      "100% cotton long sleeve t-shirt in black. Gray scale image printed on front with red text printed on right arm.",
     mainImage: require("../assets/Unconquered_Black_Long_Sleeve_Male_Model_1024x1024.webp"),
     secondaryImage: require("../assets/Unconquered_Black_Long_Sleeve_Male_Model_Detail_1024x1024.webp"),
     additionalImages: [
@@ -100,9 +107,10 @@ const products = [
     price: 35,
   },
   {
-    id: uniqid(),
+    id: "plane-crewneck",
     name: "Plane Crewneck",
-    description: "",
+    description:
+      "Plane from the official Kamikaze album art wraps around the right side with Kamikaze printed in black on the left arm of a sandstone crew neck.",
     mainImage: require("../assets/Plane_Crewneck_Female_Model_Front_1024x1024.webp"),
     secondaryImage: require("../assets/Plane_Crewneck_Female_Model_Back_1024x1024.webp"),
     additionalImages: [
@@ -114,9 +122,9 @@ const products = [
     price: 60,
   },
   {
-    id: uniqid(),
+    id: "kamikaze-hat",
     name: "Kamikaze Hat",
-    description: "",
+    description: "Text embroidered in white on front of a black New Era hat.",
     mainImage: require("../assets/Kamikaze_Hat_Female_Model_1024x1024.webp"),
     secondaryImage: require("../assets/Kamikaze_Hat_Male_Model_1024x1024.webp"),
     additionalImages: [require("../assets/Kamikaze_Hat_1024x1024.webp")],
@@ -124,17 +132,6 @@ const products = [
     quantity: 0,
     price: 30,
   },
-  // {
-  //   id: uniqid(),
-  //   name: "Banner",
-  //   description: "",
-  //   mainImage: require("../assets/Kamakaze_Banner_NEW_1600x.webp"),
-  //   secondaryImage: null,
-  //   additionalImages: null,
-  //   size: null,
-  //   quantity: null,
-  //   price: null,
-  // },
 ];
 
 export default products;
