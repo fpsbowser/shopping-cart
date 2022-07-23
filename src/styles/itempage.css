@@ -36,6 +36,41 @@
   padding-right: 1rem;
 }
 
+#size-container {
+  display: flex;
+  font-size: 1rem;
+  justify-self: center;
+  justify-content: space-around;
+}
+
+.small {
+  width: 2rem;
+  border: 1px solid white;
+  padding: 0.9rem;
+}
+
+.medium {
+  width: 2rem;
+  border: 1px solid white;
+  padding: 0.9rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.large {
+  width: 2rem;
+  border: 1px solid white;
+  padding: 0.9rem;
+}
+
+.selected {
+  border: 1px solid red;
+  /* width: 2rem; */
+  /* padding: 0.9rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem; */
+}
+
 .info {
   display: grid;
   gap: 1rem;

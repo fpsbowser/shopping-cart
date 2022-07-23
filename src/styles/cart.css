@@ -35,6 +35,11 @@
   font-size: 1.7em;
 }
 
+#size-and-quantity {
+  display: flex;
+  justify-content: space-around;
+}
+
 .checkout-container {
   display: grid;
   color: white;
