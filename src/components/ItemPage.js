@@ -8,6 +8,7 @@ const ItemPage = (props) => {
 
   const [index, setIndex] = useState(0);
   const [qty, setQty] = useState(1);
+  const [size, setSize] = useState("medium");
 
   useEffect(() => {
     setIndex(returnIndex(params.id));
@@ -21,6 +22,24 @@ const ItemPage = (props) => {
   const decrement = () => {
     console.log("decrement");
     setQty(qty - 1);
+  };
+
+  const removeStyle = () => {
+    document.querySelectorAll(".selected").forEach(function (element) {
+      element.classList.remove("selected");
+    });
+  };
+
+  let newItem = {};
+
+  const selected = (e, newSize) => {
+    console.log(e.target.parentElement.children);
+    console.log(size);
+    // remove selected class from siblings
+    removeStyle();
+    setSize(newSize);
+    console.log(newSize);
+    e.target.classList.add("selected");
   };
 
   const returnIndex = (params) => {
@@ -91,11 +110,40 @@ const ItemPage = (props) => {
                 </div>
               </div>
             </div>
-
+            <div id="size-container">
+              <p
+                className="small sizebutton"
+                onClick={(e) => {
+                  selected(e, "small");
+                }}
+              >
+                S
+              </p>
+              <p
+                className="medium selected"
+                onClick={(e) => {
+                  selected(e, "medium");
+                }}
+              >
+                M
+              </p>
+              <p
+                className="large sizebutton"
+                onClick={(e) => {
+                  selected(e, "large");
+                }}
+              >
+                L
+              </p>
+            </div>
             <button
               id="add-btn"
               onClick={() => {
-                handleclick(products[index], qty);
+                const copy = Object.assign({}, products[index]);
+                // copy = products[index];
+                copy.quantity = qty;
+                copy.size = size;
+                handleclick(qty, copy);
               }}
             >
               Add to bag

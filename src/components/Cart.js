@@ -47,7 +47,11 @@ const Cart = (props) => {
                   }}
                 />
                 <p className="cart-name">{item.name}</p>
-                <p className="cart-quantity">Quantity: {item.quantity}</p>
+                <div id="size-and-quantity">
+                  <p id="size">{item.size}</p>
+                  <p className="cart-quantity">Quantity: {item.quantity}</p>
+                </div>
+
                 <p className="cart-price">Price: ${item.price}</p>
               </div>
             </div>
