@@ -14,18 +14,28 @@ function App() {
   const [customerItems, setCustomerItems] = useState([]);
   const [quantity, setQuantity] = useState(0);
 
-  const handleclick = (item, qty) => {
-    const itemIdArr = customerItems.map((item) => {
-      return item.id;
-    });
-    console.log(itemIdArr);
-    if (itemIdArr.includes(item.id)) {
+  const handleclick = (qty, newItem) => {
+    if (
+      customerItems.some((e) => e.id === newItem.id && e.size === newItem.size)
+    ) {
+      console.log("dupe");
+      let items = customerItems.map((item) => {
+        if (item.id === newItem.id && item.size === newItem.size) {
+          // find duplicate item and update quantity
+          item.quantity += newItem.quantity;
+          return item;
+        }
+        return item;
+      });
+      console.log(items);
+      setCustomerItems(items);
       setQuantity(quantity + qty);
-      item.quantity += qty;
     } else {
-      item.quantity += qty;
+      setCustomerItems((prevState) => {
+        return [...prevState, newItem];
+      });
       setQuantity(quantity + qty);
-      setCustomerItems(customerItems.concat(item));
+      console.log(customerItems);
     }
   };
 
@@ -35,7 +45,7 @@ function App() {
     setQuantity(quantity - qty);
   };
 
-  console.log(products);
+  // console.log(products);
   return (
     <Router>
       <div className="App">
