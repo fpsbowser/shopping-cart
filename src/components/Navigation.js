@@ -5,8 +5,7 @@ import "../styles/navigation.css";
 const Navigation = (props) => {
   const { quantity } = props;
 
-  console.log(quantity);
-
+  // console.log(quantity);
   return (
     <nav>
       <Link to={"/"}>

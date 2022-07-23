@@ -6,14 +6,8 @@ const Shop = (props) => {
   const { products } = props;
   console.log(products);
 
-  const handleclick = (e) => {
-    console.log(e);
-  };
-
   const changeNewSrc = (e, newSrc) => {
-    console.log(e.target.src);
     e.target.src = newSrc;
-    console.log(newSrc);
   };
 
   const changeBackSrc = (e, oldSrc) => {
@@ -34,9 +28,6 @@ const Shop = (props) => {
           <div className="wrapper" key={product.id}>
             <Link to={`${product.id}`}>
               <img
-                onClick={(e) => {
-                  handleclick(e);
-                }}
                 onMouseOver={(e) => {
                   changeNewSrc(e, product.secondaryImage);
                 }}
