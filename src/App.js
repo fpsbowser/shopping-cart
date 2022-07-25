@@ -47,7 +47,7 @@ function App() {
 
   // console.log(products);
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Navigation quantity={quantity} />
         <Routes>
