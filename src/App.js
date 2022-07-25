@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
@@ -47,7 +47,7 @@ function App() {
 
   // console.log(products);
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="/">
       <div className="App">
         <Navigation quantity={quantity} />
         <Routes>
@@ -67,7 +67,7 @@ function App() {
         </Routes>
         <Social />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
