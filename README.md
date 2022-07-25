@@ -4,6 +4,6 @@ This shopping cart app is a replica of the [Eminem merch store](https://shop.emi
 
 ## Languages/Tools Used
 
-HTML/CSS/JavaScript
+HTML/CSS/JavaScript/React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and utilizes the 'react-router-dom' library.
