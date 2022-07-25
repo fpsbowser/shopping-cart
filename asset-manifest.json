@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fpsbowser/shopping-cart/static/css/main.4ac9d555.css",
-    "main.js": "/fpsbowser/shopping-cart/static/js/main.e7476c86.js",
+    "main.js": "/fpsbowser/shopping-cart/static/js/main.a69a70d9.js",
     "static/media/Kamikaze_Crop_-_Detail_-_Liv_1024x1024.webp": "/fpsbowser/shopping-cart/static/media/Kamikaze_Crop_-_Detail_-_Liv_1024x1024.07cbf771b61ac489c883.webp",
     "static/media/Kamakaze_Banner_NEW_1600x.jpg": "/fpsbowser/shopping-cart/static/media/Kamakaze_Banner_NEW_1600x.fbca8d010fd18d988838.jpg",
     "static/media/Plane_Crewneck_Male_Model_Detail_1024x1024.webp": "/fpsbowser/shopping-cart/static/media/Plane_Crewneck_Male_Model_Detail_1024x1024.ab9b679c53766117792d.webp",
@@ -42,10 +42,10 @@
     "static/media/Top_Gunner_Crop_-_Gina_1024x1024.webp": "/fpsbowser/shopping-cart/static/media/Top_Gunner_Crop_-_Gina_1024x1024.8ddb64397904c63e7622.webp",
     "index.html": "/fpsbowser/shopping-cart/index.html",
     "main.4ac9d555.css.map": "/fpsbowser/shopping-cart/static/css/main.4ac9d555.css.map",
-    "main.e7476c86.js.map": "/fpsbowser/shopping-cart/static/js/main.e7476c86.js.map"
+    "main.a69a70d9.js.map": "/fpsbowser/shopping-cart/static/js/main.a69a70d9.js.map"
   },
   "entrypoints": [
     "static/css/main.4ac9d555.css",
-    "static/js/main.e7476c86.js"
+    "static/js/main.a69a70d9.js"
   ]
 }
